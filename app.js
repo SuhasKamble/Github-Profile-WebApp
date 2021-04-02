@@ -1,8 +1,8 @@
 const profileContainer = document.querySelector('.profile-container');
 const search = document.getElementById('search');
 const searchBtn = document.getElementById("searchBtn");
+profileContainer.innerHTML="<h2>Enter A Username To See Github Profile<h2>"
 
-getProfile("SuhasKamble");
 searchBtn.addEventListener('click',(e)=>{
     e.preventDefault()
     const name = search.value;
@@ -40,7 +40,7 @@ function showProfile(profile){
              <p><span>${profile.followers}</span> Followers</p>
         </div>
     </div>
-    <a href="${profile.html_url}" class="visit-btn">Visit</a>
+    <a href="${profile.html_url}" target="_blank" class="visit-btn">Visit</a>
 
     
     `
